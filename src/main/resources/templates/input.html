@@ -8,8 +8,9 @@
     <h1 th:text="#{content.title}"></h1>
     <p><h2 th:text="#{content.message}"></h2></p>
     <p th:text="#{content.message2}"></p>
-    <form method="post" action="/confirm">
-        <input type="text" name="val">
+    <form method="post" action="/output">
+    <p th:if="${not #strings.isEmpty(previous)}" th:text="'前回入力された値は「' + ${previous} + '」でした。'"></p>
+        <input type="text" name="val" th:value="${val}">
         <button type="submit">送信</button>
     </form>
 </body>

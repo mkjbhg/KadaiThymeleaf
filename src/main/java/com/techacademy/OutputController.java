@@ -11,7 +11,7 @@ public class OutputController {
 
 
 
-    @PostMapping("/confirm")
+    @PostMapping("/output")
     public String postOutput(@RequestParam("val") String val, Model model) {
         // フォームから送信されてきた値をModelに登録
         model.addAttribute("val", val);
